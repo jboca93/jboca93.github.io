@@ -54,14 +54,20 @@
 <h1>Project</h1>
     <p><em>Tree Testing Exercise, DATE</em></p>
     <h2>Instructions</h2>
-    <ol><span style="font-size:12px;">
+    <span style="font-size:14px;"><ol>
     <li>Your tester will present you with a task.</li>
         <li>Refresh the page <strong>before</strong> starting the task to restart the timer.</li>
         <li>Click to expand/collapse sections and navigate the structure below to complete tasks. Think aloud as you complete the task.</li>
-        </span>
-    </ol>
     
-    <h2>Elapsed Time: <span id="timer">0:00</span></h2>
+        
+    </ol>
+       
+        </span>
+    
+    
+    <h3>Elapsed Time: <span id="timer">0:00</span></h3>
+    <h3>Total Clicks: <span id="clickCounter">0</span></h3>
+
     
     <h2>Primary Navigation Menu</h2>
 
@@ -143,6 +149,14 @@ function updateTimer() {
 
 // Update the timer every second
 setInterval(updateTimer, 1000);
+    
+    let clickCount = 0;
+
+document.addEventListener("click", function () {
+    clickCount++;
+    document.getElementById("clickCounter").textContent = clickCount;
+});
+
 
 </script>
 
