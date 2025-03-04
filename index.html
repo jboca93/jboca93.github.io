@@ -3,140 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computing Services InfoCenter</title>
+    <title>JBoca93 GitHub Pages</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            text-align: center;
+            margin: 50px;
         }
-        
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
         ul {
-    list-style-type: none; /* Removes bullets */
-    padding-left: 0; /* Optional: Adjusts indentation */
-}
-        
-        .tree {
             list-style-type: none;
-            padding-left: 20px;
+            padding: 0;
         }
-        .tree li {
-            cursor: pointer;
-            margin: 5px 0;
-            position: relative;
+        li {
+            margin: 10px 0;
         }
-        .tree li span {
-            display: inline-block;
-            padding: 5px;
-            border-radius: 3px;
-        }
-        .tree li span:hover {
-            background-color: #f0f0f0;
-        }
-        .toggle::before {
-            content: "▶";
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .toggle.expanded::before {
-            content: "▼";
-        }
-        .nested {
-            display: none;
-            margin-left: 20px;
-        }
-        .nested.visible {
+        a {
             display: block;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<h1>Computing Services InfoCenter</h1>
-    <p><em>Tree Testing Exercise, March 2025</em></p>
-<p>Click to expand/collapse sections and navigate the structure to complete tasks presented by the tester.</p>
-    
-    <h2>Elapsed Time: <span id="timer">0:00</span></h2>
-
-
-<ul class="tree">
-    <li>
-        <span class="toggle">H1</span>
-        <ul class="nested">
-            <li><span class="toggle">H2</span>
-            <ul class="nested">
-                <li><span>H3</span></li>
-                </ul>
-            </li>
-            <li><span>H2</span></li>
-            <li><span>H2</span></li>
+    <h1>Jake's Tree Testing Resources</h1>
+    <div class="container">
+        <ul>
+            <li><a href="template.html">Tree Testing Template</a></li>
+            <li><a href="infocenter.html">Computing Services InfoCenter, March 2025</a></li>
         </ul>
-    </li>
-    
-    <li>
-        <span class="toggle">H1</span>
-        <ul class="nested">
-            <li><span class="toggle">H2</span>
-            <ul class="nested">
-                <li><span>H3</span></li>
-                </ul>
-            </li>
-            <li><span>H2</span></li>
-            <li><span>H2</span></li>
-        </ul>
-    </li>
-    
-    <li>
-        <span class="toggle">H1</span>
-        <ul class="nested">
-            <li><span class="toggle">H2</span>
-            <ul class="nested">
-                <li><span>H3</span></li>
-                </ul>
-            </li>
-            <li><span>H2</span></li>
-            <li><span>H2</span></li>
-        </ul>
-    </li>
-    
-    <li>
-        <span class="toggle">H1</span>
-        <ul class="nested">
-            <li><span class="toggle">H2</span>
-            <ul class="nested">
-                <li><span>H3</span></li>
-                </ul>
-            </li>
-            <li><span>H2</span></li>
-            <li><span>H2</span></li>
-        </ul>
-    </li>
-    
-</ul>
-
-<script>
-    document.querySelectorAll('.toggle').forEach(item => {
-        item.addEventListener('click', function () {
-            let nestedList = this.nextElementSibling;
-            if (nestedList) {
-                nestedList.classList.toggle('visible');
-                this.classList.toggle('expanded');
-            }
-        });
-    });
-    
-    let startTime = Date.now(); // Capture the timestamp when the page loads
-
-function updateTimer() {
-    let elapsedTime = Math.floor((Date.now() - startTime) / 1000); // Convert to seconds
-    let minutes = Math.floor(elapsedTime / 60);
-    let seconds = elapsedTime % 60;
-    document.getElementById("timer").textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-}
-
-// Update the timer every second
-setInterval(updateTimer, 1000);
-
-</script>
+    </div>
 
 </body>
 </html>
